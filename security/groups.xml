@@ -1,0 +1,42 @@
+<odoo>
+    <data noupdate="1">
+
+        <!-- Create Groups -->
+        <record id="group_claim_approvers" model="res.groups">
+            <field name="name">Claim Approvers</field>
+            <field name="category_id" ref="base.module_category_administration"/>
+        </record>
+
+
+
+        <record id="group_recruitment_approvers" model="res.groups">
+            <field name="name">Recruitment Approvers</field>
+            <field name="category_id" ref="base.module_category_administration"/>
+        </record>
+
+        <record id="group_travel_approvers" model="res.groups">
+            <field name="name">Travel Approvers</field>
+            <field name="category_id" ref="base.module_category_administration"/>
+        </record>
+
+
+        <record id="group_equipment_approvers" model="res.groups">
+                <field name="name">Equipment Approvers</field>
+                <field name="category_id" ref="base.module_category_administration"/>
+        </record>
+
+        <!-- Add Admin to Claim Approvers Group -->
+        <record id="base.user_admin" model="res.users">
+            <field name="groups_id" eval="[(4, ref('group_claim_approvers')), (4, ref('group_equipment_approvers'))]"/>
+        </record>
+
+        <!-- Add Demo to Recruitment & Travel Approvers Groups -->
+
+        <record id="base.user_demo" model="res.users">
+            <field name="groups_id" eval="[(4, ref('group_recruitment_approvers')), (4, ref('group_travel_approvers'))]"/>
+        </record>
+
+
+
+    </data>
+</odoo>

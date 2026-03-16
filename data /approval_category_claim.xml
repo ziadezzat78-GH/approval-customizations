@@ -1,0 +1,32 @@
+
+<odoo>
+    <data noupdate="1">
+        <record id="approval_category_claim_request" model="approval.category">
+            <field name="name">Claim Request</field>
+            <field name="automated_sequence" eval="True"/>
+            <field name="sequence_code">CLAIM</field>
+            <field name="category_code">claim</field>
+        </record>
+
+        <record id="approval_category_recruitment_request" model="approval.category">
+            <field name="name">Recruitment Request</field>
+             <field name="automated_sequence" eval="True"/>
+            <field name="sequence_code">RECRUIT</field>
+            <field name="category_code">recruitment</field>
+        </record>
+
+        <record id="approval_category_travel_request" model="approval.category">
+            <field name="name">Travel Request</field>
+             <field name="automated_sequence" eval="True"/>
+            <field name="sequence_code">TRV</field>
+            <field name="category_code">travel</field>
+        </record>
+
+        <record id="approval_category_equipment_request" model="approval.category">
+            <field name="name">Equipment Request</field>
+             <field name="automated_sequence" eval="True"/>
+            <field name="sequence_code">EQ</field>
+            <field name="category_code">equipment</field>
+        </record>
+    </data>
+</odoo>

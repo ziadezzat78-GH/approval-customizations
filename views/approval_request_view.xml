@@ -1,0 +1,39 @@
+
+<odoo>
+    <record id="approval_request_form_claim_inherit" model="ir.ui.view">
+        <field name="name">approval.request.form.inherit</field>
+        <field name="model">approval.request</field>
+        <field name="inherit_id" ref="approvals.approval_request_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//group[field[@name='category_id']]" position="after">
+                <group invisible="ziad != 'claim'">
+                    <field name="amount"/>
+                    <field name="reason"/>
+                </group>
+                 <group invisible="ziad != 'recruitment'">
+                    <field name="position_title"/>
+                    <field name="department_id"/>
+                    <field name="experience_description"/>
+                    <field name="expected_salary"/>
+                    <field name="recruitment_justification"/>
+                    <field name="position_name"/>
+                    <field name="num_vacancies"/>
+
+                </group>
+                <group invisible="ziad != 'travel'">
+                    <field name="destination"/>
+                    <field name="date"/>
+                </group>
+
+                <group invisible="ziad != 'equipment'">
+                    <field name="equipment_type"/>
+                    <field name="price"/>
+                </group>
+
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>
