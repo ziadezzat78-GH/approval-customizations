@@ -5,10 +5,10 @@ A professional Odoo 18 module that extends the native Approvals module with cust
 ## Features
 
 - 4 custom approval categories:
-  - **Claim Request** - with amount validation (max 500 EGP)
+  - **Claim Request** - with amount validation 
   - **Recruitment Request** - auto-creates Job Position on approval
   - **Travel Request** - with destination and date fields
-  - **Equipment Request** - with equipment type and price validation (max 1500 EGP)
+  - **Equipment Request** - with equipment type and price validation 
 - Auto-assign approvers based on category using security groups
 - Dynamic form fields that show/hide based on category
 - Business validations using @api.constrains
